@@ -38,6 +38,7 @@ dependencies:
   flutter_bloc: ^8.1.5
   bloc_connectivity: ^0.0.2
   rive: ^0.13.1
+  riverbloc: ^2.2.0
 
 dev_dependencies:
   flutter_test:

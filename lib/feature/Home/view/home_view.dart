@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
 
+import '../widgets/container_loader.dart';
+
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
@@ -42,24 +44,18 @@ class HomeView extends StatelessWidget {
                       ),
                     ],
                   ),
-                  child: Column(
-                    children: [
-                      Text('Item $index'),
-                      const SizedBox(height: 10),
-                      SizedBox(
-                        height: 100,
-                        width: 100,
-                        child: RiveAnimation.asset(
-                          'assets/riv/dot_loading.riv',
-                          animations: ['idle', 'loading'],
-                          controllers: [
-                            SimpleAnimation('idle'),
-                            SimpleAnimation('loading'),
-                          ],
-                          fit: BoxFit.cover,
+                  child: GestureDetector(
+                    child: Column(
+                      children: [
+                        Text('Item $index'),
+                        const SizedBox(height: 10),
+                        const SizedBox(
+                          height: 100,
+                          width: 100,
+                          child: RivContainer(),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 );
               },
