@@ -49,10 +49,28 @@ class HomeView extends StatelessWidget {
                       children: [
                         Text('Item $index'),
                         const SizedBox(height: 10),
-                        const SizedBox(
-                          height: 100,
+                       SizedBox(
+                          
                           width: 100,
-                          child: RivContainer(),
+                          child: TextButton(onPressed: (){
+                            showDialog(
+                              
+                              context: 
+                          
+                          context,
+                          
+                             builder: 
+                            (context) => const AlertDialog(
+                              elevation: 0,
+                              
+                              backgroundColor: Colors.transparent,
+                              shadowColor: Colors.transparent,
+                              content: CircularProgressIndicator(
+                                backgroundColor: Colors.transparent,
+                              ),
+                            )
+                            );
+                          }, child: const Text('button')),
                         ),
                       ],
                     ),
